@@ -33,6 +33,7 @@ main:
 	add $a0, $zero, $t3
 	syscall
 	
+	# exit from program
 	li $v0, 10
 	syscall
 	
