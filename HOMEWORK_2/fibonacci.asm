@@ -1,6 +1,6 @@
 .data
 	prompt: .asciiz "Enter a number: "
-	newline: .asciiz "\n"
+	space: .asciiz " "
 
 .text
 main:
@@ -21,22 +21,24 @@ main:
 	li $t4, 2 # loop counter
 	
 	# print first two fibonacci numbers
+	# print first fibonacci number
 	li $v0, 1
 	move $a0, $t1
 	syscall
 	
-	# print newline
+	# print space
 	li $v0, 4
-	la $a0, newline
+	la $a0, space
 	syscall
 	
+	# print second fibonacci number
 	li $v0, 1
 	move $a0, $t2
 	syscall
 	
-	# print newline
+	# print space
 	li $v0, 4
-	la $a0, newline
+	la $a0, space
 	syscall
 	
 fibonacci_loop:
@@ -52,9 +54,9 @@ fibonacci_loop:
 	move $a0, $t1
 	syscall
 	
-	# print newline
+	# print space
 	li $v0, 4
-	la $a0, newline
+	la $a0, space
 	syscall
 	
 	# repeat loop
