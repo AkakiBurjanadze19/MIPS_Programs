@@ -28,7 +28,6 @@ gcd_loop:
 	beqz $t1, exit # if second number is 0, exit the loop
 	
 	div $t0, $t1 # divide first number by the second number
-	
 	mfhi $t2 # get the remainder
 	
 	move $t0, $t1 # move second number to $t0
