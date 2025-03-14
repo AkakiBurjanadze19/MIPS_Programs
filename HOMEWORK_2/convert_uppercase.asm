@@ -32,7 +32,7 @@ convert_to_uppercase:
 		
 skip:
 	addi $t0, $t0, 1 # move to the next char in a string
-	j convert_to_uppercase
+	j convert_to_uppercase # jump back to loop
 
 exit:
 	# print result
