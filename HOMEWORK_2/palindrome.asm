@@ -28,7 +28,7 @@ find_end:
 	j find_end # repeat loop
 
 get_last_position:
-	subi $t1, $t1, 1
+	subi $t1, $t1, 1 # last char position
 	
 check_palindrome:
 	bge $t0, $t1, show_palindrome_message # if left >= right, exit the loop
